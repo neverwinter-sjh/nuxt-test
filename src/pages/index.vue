@@ -6,6 +6,8 @@ import { useFetchPlaceholder } from '@/api/placeHolder'
 const { data, error, pending } = useFetchPlaceholder()
 let interval: ReturnType<typeof setInterval>
 
+console.time()
+
 onMounted(() => {
   if (pending.value) {
     console.log('pending', pending.value)
@@ -15,6 +17,7 @@ onMounted(() => {
         console.log('==========')
         console.log('loading is done')
         console.log('data', toRaw(data.value))
+        console.timeEnd()
         clearInterval(interval)
       }
     }, 500)
