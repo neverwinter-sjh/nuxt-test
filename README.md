@@ -1,42 +1,24 @@
-# Nuxt 3 Minimal Starter
+# **2. 프로젝트 가이드**
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- 개요
+- 기술스택
+- 설치 방법
+  - node 16.20.0
+  - git 주소
+  - nuxt 설치 및 실행방법
+- 배포방법
+  - WAS와 병합 방법
+  - 개발서버로 배포 방법
+- 프로젝트 폴더 구조(그림 + 설명)
+- 컴포넌트 구조도(그림)
+- eslint 설명
+- prettier 설명
+- typescript 규칙 설명
+- 개발 주의점
+- git branch 전략(오픈 전)
+  - development가 메인
+  - 개발 단위는 feature. feature/(개발 내용 영문으로)
+  - 수정 및 모든 사항은 feature로 설정함.
+  - PR을 요청하고 개발자 스스로 병합.
+  - 오픈 시에 production branch로 merge함.
+  - 이후 운영 전략은 새롭게 수립 필요.

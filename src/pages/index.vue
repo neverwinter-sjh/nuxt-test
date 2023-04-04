@@ -4,5 +4,5 @@ import MyCounter from '@/components/MyCounter.vue'
 
 <template>
   <MyCounter></MyCounter>
-  <NuxtWelcome />
+  <v-btn color="primary">Click</v-btn>
 </template>
