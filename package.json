@@ -2,17 +2,20 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "nuxi build --dotenv .env.production",
+    "dev": "nuxi dev --dotenv .env.development",
+    "generate": "nuxi generate --dotenv .env.production",
+    "preview": "nuxi preview",
+    "start": "nuxi start",
+    "postinstall": "nuxi prepare",
+    "cleanup": "nuxi cleanup",
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.16.3",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@types/node": "^18.15.11",
@@ -35,6 +38,7 @@
     "vue-tsc": "^1.2.0"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "@pinia/nuxt": "^0.4.7",
     "vuetify": "^3.1.4"
   }
