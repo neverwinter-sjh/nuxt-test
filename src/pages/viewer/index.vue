@@ -1,11 +1,22 @@
 <script lang="ts" setup>
-import MyCounter from '@/components/MyCounter.vue'
+import MyCounter from '~/components/MyCounter.vue'
 import { onMounted } from 'vue'
 
 onMounted(() => {
   console.log('mounted')
 })
 </script>
+
+<template>
+  <div class="list-wrapper">
+    <div class="list"></div>
+    <div class="viewer-content">
+      <div class="comp-container">
+        <MyCounter />
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 * {
@@ -41,14 +52,3 @@ onMounted(() => {
   }
 }
 </style>
-
-<template>
-  <div class="list-wrapper">
-    <div class="list"></div>
-    <div class="viewer-content">
-      <div class="comp-container">
-        <MyCounter />
-      </div>
-    </div>
-  </div>
-</template>
