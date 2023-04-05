@@ -1,13 +1,16 @@
 import { checker } from 'vite-plugin-checker'
-import { resolve } from 'path'
+
+const isDevelopment = process.env.NODE_ENV === 'development'
+
+console.log('isDevelopment', isDevelopment)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   components: false,
   srcDir: 'src/',
   modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
-  css: ['vuetify/lib/styles/main.sass', '@/assets/css/global.scss'],
+  css: ['@/assets/css/style.scss'],
   typescript: {
     strict: true,
     typeCheck: true,
@@ -22,8 +25,10 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  build: {
-    transpile: ['vuetify'],
+  nitro: {
+    prerender: {
+      ignore: [!isDevelopment ? '/viewer' : ''],
+    },
   },
   runtimeConfig: {
     public: {

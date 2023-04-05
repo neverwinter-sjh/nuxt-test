@@ -3,15 +3,30 @@ import { useCounterStore } from '@/stores/counter'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 
+// counterStore 호출
 const store = useCounterStore()
+
+// storeToRefs로 store의 state를 ref로 변환
 const { count } = storeToRefs(store)
+
+// store의 action을 직접 호출
 const { increment, decrement } = store
 
+// 숫자 변수
 const a: Ref<number> = ref(3)
 
+/**
+ * a를 1 증가
+ * @returns
+ */
 const plus = () => {
   a.value += 1
 }
+
+/**
+ * a를 1 감소
+ * @returns
+ */
 const minus = () => {
   a.value -= 1
 }

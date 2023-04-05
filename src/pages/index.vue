@@ -1,33 +1,29 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted, onActivated } from 'vue'
 import MyCounter from '@/components/MyCounter.vue'
 import { useFetchPlaceholder } from '@/api/placeHolder'
 
-const { data, error, pending } = useFetchPlaceholder()
-let interval: ReturnType<typeof setInterval>
-
-console.time()
+const { data, refresh /* ... */ } = await useAsyncData(async () => {
+  const { data } = await useFetchPlaceholder()
+  return data
+})
 
 onMounted(() => {
-  if (pending.value) {
-    console.log('pending', pending.value)
-    interval = setInterval(() => {
-      console.log('pending', pending.value)
-      if (!pending.value) {
-        console.log('==========')
-        console.log('loading is done')
-        console.log('data', toRaw(data.value))
-        console.timeEnd()
-        clearInterval(interval)
-      }
-    }, 500)
-  } else {
-    console.log('data', toRaw(data.value))
-  }
+  console.log('data', toRaw(data.value))
+  setTimeout(() => {
+    reloadNuxtApp()
+  }, 2000)
 })
 </script>
 
 <template>
-  <MyCounter></MyCounter>
-  <v-btn color="primary">Click</v-btn>
+  <div class="p-2">
+    <MyCounter></MyCounter>
+    <button
+      type="button"
+      class="btn btn-primary"
+    >
+      Primary
+    </button>
+  </div>
 </template>
