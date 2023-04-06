@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "editor.fontFamily": "D2Coding, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "D2Coding, Menlo, Monaco, 'Courier New', monospace",
+  "editor.insertSpaces": true
 }
