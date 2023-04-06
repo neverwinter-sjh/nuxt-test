@@ -1,16 +1,20 @@
 import { checker } from 'vite-plugin-checker'
 
+// 개발 환경 변수
 const isDevelopment = process.env.NODE_ENV === 'development'
 
-console.log('isDevelopment', isDevelopment)
-
+// 라우터에서 제외할 경로
 const ignoreRouterArray: string[] = []
 
-if (!isDevelopment) {
+// 개발 환경, 빌드 환경에 따라 값을 설정한다.
+if (isDevelopment) {
+  // 개발 환경
+} else {
+  // 빌드 환경
+
+  // 뷰어 페이지는 라우터에서 제외한다.
   ignoreRouterArray.push('src/pages/viewer/**')
 }
-
-console.log(ignoreRouterArray)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
