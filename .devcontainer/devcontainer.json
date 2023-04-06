@@ -23,7 +23,8 @@
 				"dbaeumer.vscode-eslint",
 				"mrmlnc.vscode-scss",
 				"esbenp.prettier-vscode",
-				"christian-kohler.npm-intellisense"
+				"christian-kohler.npm-intellisense",
+				"Vue.volar"
 			]
 		}
 	}
