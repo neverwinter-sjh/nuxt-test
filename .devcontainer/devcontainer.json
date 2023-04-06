@@ -9,6 +9,23 @@
 			"version": "latest"
 		},
 		"ghcr.io/akhildevelops/devcontainer-features/apt:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"emmanuelbeziat.vscode-great-icons",
+				"Vue.vscode-typescript-vue-plugin",
+				"wayou.vscode-todo-highlight",
+				"sibiraj-s.vscode-scss-formatter",
+				"willjleong.nuxt-typescript-snippets",
+				"PKief.material-icon-theme",
+				"GitHub.copilot",
+				"dbaeumer.vscode-eslint",
+				"mrmlnc.vscode-scss",
+				"esbenp.prettier-vscode",
+				"christian-kohler.npm-intellisense"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
