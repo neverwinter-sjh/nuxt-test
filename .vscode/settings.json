@@ -1,5 +1,14 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "css.validate": false, // Disable built-in lint
+  "less.validate": false, // Disable built-in lint
+  "scss.validate": false, // Disable built-in lint
+  "stylelint.enable": true, // Enable stylelint
+  "stylelint.validate": ["css", "less", "postcss", "vue"], // Add vue files
+  "vetur.validation.style": false, // Disable vetur style validation
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
 }

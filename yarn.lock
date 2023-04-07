@@ -6123,7 +6123,7 @@ stylelint-config-recommended-scss@^9.0.0:
     stylelint-config-recommended "^10.0.1"
     stylelint-scss "^4.4.0"
 
-stylelint-config-recommended-vue@>=1.1.0:
+stylelint-config-recommended-vue@>=1.1.0, stylelint-config-recommended-vue@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended-vue/-/stylelint-config-recommended-vue-1.4.0.tgz#0a182da17dc9e846e4bec65a7676ccf882b35964"
   integrity sha512-DVJqyX2KvMCn9U0+keL12r7xlsH26K4Vg8NrIZuq5MoF7g82DpMp326Om4E0Q+Il1o+bTHuUyejf2XAI0iD04Q==
