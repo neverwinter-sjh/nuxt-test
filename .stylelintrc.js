@@ -10,5 +10,6 @@ module.exports = {
     'stylelint-config-standard-vue/scss',
     'stylelint-config-prettier-scss',
   ],
+  processors: ['stylelint-processor-html'],
   rules: {},
 }
