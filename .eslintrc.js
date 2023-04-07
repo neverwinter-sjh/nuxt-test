@@ -17,7 +17,6 @@ module.exports = {
         allow: ['log', 'warn', 'dir', 'timeLog', 'assert', 'clear', 'count', 'countReset', 'group', 'groupEnd', 'table', 'dirxml', 'error', 'groupCollapsed', 'Console', 'profile', 'profileEnd', 'timeStamp', 'context'],
       },
     ],
-    'import/order': ['off'],
     'vue/no-multiple-template-root': 'off',
     '@typescript-eslint/no-unused-vars': 0,
     'require-await': 'off',
