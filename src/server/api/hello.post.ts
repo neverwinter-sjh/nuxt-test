@@ -1,4 +1,4 @@
-export default defineEventHandler(event => {
+export default defineEventHandler(() => {
   console.log('hello post')
   // get config
   const config = useRuntimeConfig()

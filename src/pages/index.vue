@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, nextTick } from 'vue'
+import { onMounted } from 'vue'
 import useGetPosts from '~/api/useGetPosts'
 import MyCounter from '~/components/MyCounter.vue'
 

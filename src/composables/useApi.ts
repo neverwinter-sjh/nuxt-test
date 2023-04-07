@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-const config = useRuntimeConfig()
-
 /**
  * axios 인스턴스를 생성
  * 옵션은 https://github.com/axios/axios 의 Request Config 챕터 확인

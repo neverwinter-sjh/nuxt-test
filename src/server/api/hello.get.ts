@@ -6,7 +6,7 @@ export default defineEventHandler(async event => {
   // console.log(event.node.req.method)
 
   // Query
-  const query = getQuery(event)
+  // const query = getQuery(event)
 
   const data = await axios.get('/posts/1')
 

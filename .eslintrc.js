@@ -18,6 +18,7 @@ module.exports = {
       },
     ],
     'vue/no-multiple-template-root': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     'require-await': 'off',
   },
 }
