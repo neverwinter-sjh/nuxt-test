@@ -18,6 +18,11 @@ export default defineEventHandler(event => {
   }
   */
 
+  throw createError({
+    statusCode: 400,
+    statusMessage: '에러 메시지',
+  })
+
   return {
     post: 'works',
   }

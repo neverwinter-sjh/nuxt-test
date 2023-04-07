@@ -4,10 +4,22 @@ module.exports = {
     browser: true,
     node: true,
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
   extends: ['@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
-  plugins: ['@typescript-eslint', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended'],
-  rules: {},
+  plugins: [],
+  rules: {
+    'no-console': [
+      'error',
+      {
+        allow: ['log', 'warn', 'dir', 'timeLog', 'assert', 'clear', 'count', 'countReset', 'group', 'groupEnd', 'table', 'dirxml', 'error', 'groupCollapsed', 'Console', 'profile', 'profileEnd', 'timeStamp', 'context'],
+      },
+    ],
+    'import/order': ['off'],
+    'vue/no-multiple-template-root': 'off',
+    '@typescript-eslint/no-unused-vars': 0,
+    'require-await': 'off',
+  },
 }

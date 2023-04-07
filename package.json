@@ -9,10 +9,17 @@
     "start": "nuxi start",
     "postinstall": "nuxi prepare",
     "cleanup": "nuxi cleanup",
-    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:js": "eslint --ext \".ts,.vue,.js\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{tsx,ts,jsx,js,vue}": [
+      "yarn lint:js"
+    ]
   },
   "devDependencies": {
     "@nuxt/types": "^2.16.3",
@@ -31,6 +38,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.10.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "nuxt": "^3.3.2",
     "prettier": "^2.8.7",
     "sass": "^1.60.0",
