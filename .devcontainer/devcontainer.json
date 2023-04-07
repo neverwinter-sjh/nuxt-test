@@ -10,7 +10,7 @@
 			"version": "16"
 		},
 		"ghcr.io/devcontainers-contrib/features/typescript:2": {
-			"version": "latest"
+			"version": "5"
 		}
 	},
 	"customizations": {
