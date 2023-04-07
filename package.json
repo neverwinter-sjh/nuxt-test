@@ -16,12 +16,6 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
-  },
   "lint-staged": {
     "**/*.{tsx,ts,jsx,js,vue}": [
       "yarn lint:js"
