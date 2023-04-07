@@ -33,7 +33,7 @@ const minus = () => {
 </script>
 
 <template>
-  <p>a : {{ a }}</p>
+  <p class="text">a : {{ a }}</p>
   <p>Counter: {{ count }}</p>
   <div>
     <button
@@ -63,3 +63,7 @@ const minus = () => {
     </button>
   </div>
 </template>
+
+<style scoped lang="scss">
+@import '~/assets/css/test.scss';
+</style>

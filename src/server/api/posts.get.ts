@@ -10,7 +10,7 @@ export default defineEventHandler(async event => {
 
   const data = await axios.get('/posts')
 
-  console.log(data.data)
+  // console.log(data.data)
 
   return data.data
 })

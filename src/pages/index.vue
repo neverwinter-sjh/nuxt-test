@@ -5,9 +5,7 @@ import MyCounter from '~/components/MyCounter.vue'
 
 const data = await useGetPosts()
 
-onMounted(async () => {
-  console.log('onMounted', data)
-})
+onMounted(async () => {})
 </script>
 
 <template>
