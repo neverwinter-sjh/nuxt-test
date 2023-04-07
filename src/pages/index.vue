@@ -1,22 +1,12 @@
 <script lang="ts" setup>
 import { onMounted, nextTick } from 'vue'
-import { useFetchPlaceholder } from '~/api/placeHolder'
+import useGetPosts from '~/api/useGetPosts'
 import MyCounter from '~/components/MyCounter.vue'
 
-// const { data, refresh /* ... */ } = await useAsyncData(async () => {
-//   const { data } = await useFetchPlaceholder()
-//   return data
-// })
-
-const fetch = async () => {
-  const data = await useFetchPlaceholder()
-  console.log(data)
-}
+const data = await useGetPosts()
 
 onMounted(async () => {
-  nextTick(() => {
-    fetch()
-  })
+  console.log('onMounted', data)
 })
 </script>
 
@@ -26,7 +16,6 @@ onMounted(async () => {
     <button
       type="button"
       class="btn btn-primary"
-      @click="fetch"
     >
       Primary
     </button>
