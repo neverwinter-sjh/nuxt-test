@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import MyCounter from '~/components/MyCounter.vue'
 import { onMounted } from 'vue'
+import MyCounter from '~/components/MyCounter.vue'
 
 onMounted(() => {
   console.log('mounted')
