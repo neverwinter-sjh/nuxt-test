@@ -63,7 +63,3 @@ const minus = () => {
     </button>
   </div>
 </template>
-
-<style scoped lang="scss">
-@import '~/assets/css/test.scss';
-</style>

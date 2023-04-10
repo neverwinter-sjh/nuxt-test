@@ -10,5 +10,6 @@
   "vetur.validation.style": false, // Disable vetur style validation
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true
-  }
+  },
+  "volar.inlayHints.eventArgumentInInlineHandlers": false
 }

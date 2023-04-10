@@ -68,6 +68,8 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.7",
     "lodash": "^4.17.21",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "testbee-ui": "^0.0.3",
+    "my-module": "file:../my-module/dist"
   }
 }
